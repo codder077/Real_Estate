@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import userRouter  from './routes/user.routes.js';
 import authRouter from './routes/auth.routes.js';
 import cors from 'cors';
+import cookieParser from 'cookie-parser';
 dotenv.config();
 const app=express();
 const corsOptions = {
@@ -12,6 +13,7 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 app.use(express.json());
+app.use(cookieParser());
 
 const port=3000;
 
