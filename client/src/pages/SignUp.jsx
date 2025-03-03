@@ -21,7 +21,7 @@ export default function SignUp() {
     console.log('Form data at submit:', formData);
     try {
       setLoading(true);
-      const res = await fetch('http://localhost:3000/api/auth/signup', { 
+      const res = await fetch('https://real-estate-mwa8.onrender.com/api/auth/signup', { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
